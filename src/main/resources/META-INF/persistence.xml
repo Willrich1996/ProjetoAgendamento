@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+  
+  <persistence-unit name="MeuProjetoPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    
+    <properties>
+      <!-- Dados de Conexão com o MariaDB -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/Banco"/>
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <property name="jakarta.persistence.jdbc.password" value="root"/>
+      <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+      
+      <!-- Configurações do Hibernate -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
+      <property name="hibernate.show_sql" value="true"/> <!-- Mostra o SQL no console -->
+      <property name="hibernate.format_sql" value="true"/> <!-- Formata o SQL para ficar legível -->
+      
+      <!-- Cria ou atualiza as tabelas automaticamente com base nas suas classes Java -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

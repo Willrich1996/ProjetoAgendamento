@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+        <title>Teste JSF e PrimeFaces</title>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            <p:panel header="Configuração Pronta!" style="width: 500px; margin: 50px auto;">
+                <h:panelGrid columns="1" cellpadding="5">
+                    
+                    <!-- Puxando o texto do nosso ClienteBean -->
+                    <p:outputLabel value="#{clienteBean.mensagem}" style="font-weight: bold; color: green;"/>
+                    
+                    <hr/>
+                    
+                    <!-- Botão estilizado do PrimeFaces -->
+                    <p:commandButton value="Botão do PrimeFaces" icon="pi pi-check" />
+                    
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
