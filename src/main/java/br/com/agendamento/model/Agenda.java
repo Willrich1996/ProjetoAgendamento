@@ -4,10 +4,14 @@
  */
 package br.com.agendamento.model;
 
+import jakarta.persistence.Entity;
+
 /**
  *
  * @author vitin
  */
+@Entity
 public class Agenda {
+    
     
 }
